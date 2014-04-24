@@ -56,6 +56,16 @@ h4, h5, h6 {
   text-rendering: optimizeLegibility;
 }
 
+h1 a, h2 a {
+  color: #525250;
+}
+
+h1 a:hover, h2 a:hover,
+h1 a:active, h2 a:active,
+h1 a:focus, h2 a:focus {
+  color: #000;
+}
+
 h2 {
   font-family: Lora, Georgia, sans-serif;
   font-style: italic;
@@ -78,7 +88,7 @@ main p {
 
 small {
   font-weight: 300;
-  color: #999;
+  text-align: center;
 }
 
 hr {
@@ -91,10 +101,43 @@ hr {
   margin: 40px auto 60px auto;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul#main-nav {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  margin: 20px 0px 40px 0px;
+  padding-top: 20px;
+}
+
+ul#main-nav li {
+  display: inline-block;
+  margin: 5px;
+  line-height: 2em;
+}
+
+ul#main-nav li a {
+  padding: 5px 8px;
+  background-color: #f8f8f8;
+  border-radius: 2px;
+}
+
+ul#main-nav li a:hover {
+  background-color: #e8e8e8;
+}
+
 main .container,
 header .container,
 footer .container {
   background-color: #fff;
+}
+
+footer .container {
+  text-align: center;
 }
 
 header {
@@ -115,6 +158,10 @@ div.site-description {
 p.intro-message {
   font-size: 21px;
   text-align: center;
+}
+
+p.strong {
+  font-weight: bold
 }
 
 ul.aims {
@@ -155,8 +202,35 @@ ul.events li {
 * form
 */
 
-.btn, 
-.button {
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  display: inline-block;
+  outline: none;
+  width: 150px;
+  padding: 8px 10px 6px;
+  vertical-align: top;
+  margin-bottom: 15px;
+  margin-right: 5px;
+  font-weight: 300;
+  height: 45px;
+}
+
+@media only screen and (min-width: 510px){
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    width: 250px;
+  }
+}
+
+button,
+.button,
+input[type="submit"] {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   background-color: #D14747;
   color: #fefefa;
@@ -164,23 +238,18 @@ ul.events li {
   border: 1px solid #D14747;
   font-weight: 400;
   cursor: pointer;
-  line-height: 2.9;
-  font-size: 18px;
-  padding: 0px 15px;
-  text-align: center;
-  margin: 0px auto;
-  display: block;
+  font-size: 14px;
+  padding: 0px 10px;
+  height: 45px;
+  line-height: 45px;
 }
 
-a.btn, 
-a.button {
-  padding: 11px 10px 10px 10px;
-}
-
-.btn:hover,
+button:hover,
+button:focus,
 .button:hover,
-.btn:focus,
-.button:focus {
+.button:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
   background-color: #CC3333;
   border-color: #CC3333;
   color: #fff;
@@ -230,6 +299,57 @@ input[type=text] {
 
 input[type=text].right {
   float: right;
+  margin-right: 0px;
+}
+
+#eventbrite {
+  text-align: center;
+}
+
+.post-date {
+  font-size: 12px;
+  font-family: Lora, Georgia, sans-serif;
+  margin-bottom: 0px;
+}
+
+.posts {
+  margin-top: 30px;
+}
+
+.posts h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.projects main .images {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.projects main img {
+  max-width: 100px;
+  max-height: 100px;
+  display: inline-block;
+}
+
+.projects main .wide img {
+  max-width: 200px;
+}
+
+.about main img {
+  float: left;
+  margin: 7px 15px 15px 0px;
+  width: 100px;
+  height: auto;
+  border: 3px solid #f2f2f0;
+}
+
+.sponsors {
+  text-align: center;
+}
+
+.sponsors img {
+  width: 250px;
 }
 
 /* mobile size */
